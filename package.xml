@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <types>
+        <members>Event_Staging_Record__c</members>
+        <members>Event_Service_Provider__mdt</members>
+        <name>CustomObject</name>
+    </types>    
+    <types>
+        <members>EventEntity</members>
+        <members>EventService</members>
+        <members>CharacteristicEntity</members>
+        
+        <members>EventSyncEngine</members>
+        <name>ApexClass</name>
+    </types>
+<!-- 
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>    
+    <version>57.0</version>
+-->
+</Package>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Process_Mode__c</fullName>
+    <description>The mode of the service provider to process to the notification.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Process Mode</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Realtime</fullName>
+                <default>true</default>
+                <label>Realtime</label>
+            </value>
+            <value>
+                <fullName>Throttled Realtime</fullName>
+                <default>false</default>
+                <label>Throttled Realtime</label>
+            </value>
+            <value>
+                <fullName>Batch</fullName>
+                <default>false</default>
+                <label>Batch</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

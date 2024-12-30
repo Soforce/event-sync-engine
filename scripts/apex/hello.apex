@@ -8,3 +8,13 @@
 string tempvar = 'Enter_your_name_here';
 System.debug('Hello World!');
 System.debug('My name is ' + tempvar);
+
+Object anyObjs;
+Object[] anyArray;
+
+anyArray = new List<String> { '1', '2' };
+anyObjs = anyArray;
+
+System.debug(anyObjs);
+
+EventEntity event;
