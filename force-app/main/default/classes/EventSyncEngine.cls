@@ -165,7 +165,7 @@ public virtual without sharing class EventSyncEngine {
     /**
      * @description Helper method to retrieve queued event records by event type
      */
-    private List<Event_Staging_Record__c> getQueuedEventRecords(String eventType, Integer batchSize) {
+    public List<Event_Staging_Record__c> getQueuedEventRecords(String eventType, Integer batchSize) {
         return [
             SELECT Id, Event_Id__c, Event_Type__c, Event_Time__c, Status__c, Payload__c, Master_Id__c, Retry_Count__c 
             FROM Event_Staging_Record__c 
@@ -173,6 +173,13 @@ public virtual without sharing class EventSyncEngine {
             ORDER BY Event_Time__c
             LIMIT :batchSize
         ];
+    }
+
+    /**
+     * @description Helper method to retrieve queued event records by event type
+     */
+    public Integer getQueuedEventCount(String eventType) {
+        return [SELECT Count() FROM Event_Staging_Record__c WHERE Event_Type__c = :eventType AND Status__c='Queued' AND Retry_Count__c < :MaxRetryCount];
     }
 
     /**
@@ -359,7 +366,7 @@ public virtual without sharing class EventSyncEngine {
         EventResult[] erList = new List<EventResult>();
 
         try {
-            Event_Throttling_Queue__c[] throttlingQueue = [SELECT Id FROM Event_Throttling_Queue__c WHERE Event_Type__c =: eventType and Transaction_Id__c = :transactionId];
+            Event_Throttling_Queue__c[] throttlingQueue = [SELECT Id FROM Event_Throttling_Queue__c WHERE Event_Type__c =: eventType /* and Transaction_Id__c = :transactionId */];
             if(throttlingQueue.isEmpty()) {
                 // The input batch transaction Id does not match with the transaction Id in the Event_Throttling_Queue__c table. 
                 // This is triggered from an outdated ThrottlineQueueProcessor and should be skipped.
@@ -476,6 +483,13 @@ public virtual without sharing class EventSyncEngine {
             // update events;
         } 
         return erList;
+    }
+
+    /**
+     * 
+     */
+    public List<EventResult> processEvents(String eventType, List<Event_Staging_Record__c> stagingRecords) {
+        return null;
     }
 
     /**

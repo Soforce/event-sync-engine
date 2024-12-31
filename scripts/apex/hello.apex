@@ -16,3 +16,7 @@ System.debug(val);
 val = sm.put('1', 'val2');
 System.debug(val);
 
+
+UUID randomUUID = UUID.randomUUID();
+system.debug(randomUUID); // Prints the UUID string that was randomly generated
+System.debug(randomUUID.toString().length());
