@@ -1,7 +1,7 @@
 /**
  * @description Base Event entity class which has to be extended by the child event service provider
  */
-public virtual with sharing class EventEntity {
+public virtual with sharing  class EventEntity {
     // The correlation id for this event.
     public String correlationId;
     // The identifier of the notification.
@@ -21,7 +21,7 @@ public virtual with sharing class EventEntity {
     public EventEntity() {
         analyticCharacteristic = new List<CharacteristicEntity>();
     }
-
+    
     public EventEntity(String eventId, String eventType, Datetime eventTime) {
         this();
 

@@ -1,26 +1,7 @@
-
 /**
  * @description Base event service class that must be extended by the child event service provider.
  */
 public abstract inherited sharing class EventService {
-    /**
-     * @description 
-     */
-    public class EventResult {
-        // Indicate if the process is success or failure
-        public Boolean isSuccess;
-        // Returns the incoming event Id from the message queue.
-        public String eventId;
-        // If an error occurred, returns the exception of the error. If no error occurred, returns null.
-        public Exception error;
-        // The event entity data element deserialized from the event resource JSON
-        protected transient EventEntity event;
-
-        public EventResult(String eventId) {
-            isSuccess = true;
-            this.eventId = eventId;
-        }
-    }
 
     public class EventServiceException extends Exception {}
 
@@ -32,6 +13,8 @@ public abstract inherited sharing class EventService {
     public class InvalidEventException extends Exception {}
     // Exception thrown for an event that can be ignored or skipped.
     public class IgnorableEventException extends Exception {}
+    // Exception thrown for an event that is queued for batch process.
+    public class QueuedEventException extends Exception {}
     // Exception thrown for an event to be retried later, with the most common reason being read-lock issues.
     public class RetriableEventException extends Exception {}
     // Exception thrown when an event needs to be placed under Pending status due to a dependency.
@@ -47,6 +30,22 @@ public abstract inherited sharing class EventService {
 
     public enum ProcessModeEnum { Realtime, ThrottledRealtime, Batch }
 
+    public class EventResult {
+        // Indicate if the process is success or failure
+        public Boolean isSuccess;
+        // Returns the incoming event Id from the message queue.
+        public String eventId;
+        // If an error occurred, returns the exception of the error. If no error occurred, returns null.
+        public Exception error;
+        // The event entity data element deserialized from the event resource JSON
+        protected transient EventEntity event;
+        // The event staging record
+
+        public EventResult(String eventId) {
+            isSuccess = true;
+            this.eventId = eventId;
+        }
+    }
 
     public String eventType;
     public ProcessModeEnum processMode;
@@ -78,6 +77,12 @@ public abstract inherited sharing class EventService {
      * @description ...
      */
     public abstract void processEvent(EventEntity event);
+
+    /**
+     * @description ...
+     */
+    public abstract EventResult[] processEvents(EventEntity[] events);
+
     /**
      * @description ...
      */

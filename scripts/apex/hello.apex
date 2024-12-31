@@ -9,12 +9,10 @@ string tempvar = 'Enter_your_name_here';
 System.debug('Hello World!');
 System.debug('My name is ' + tempvar);
 
-Object anyObjs;
-Object[] anyArray;
+Map<String, String> sm = new Map<String, String>();
 
-anyArray = new List<String> { '1', '2' };
-anyObjs = anyArray;
+String val = sm.put('1', 'val1');
+System.debug(val);
+val = sm.put('1', 'val2');
+System.debug(val);
 
-System.debug(anyObjs);
-
-EventEntity event;

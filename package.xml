@@ -3,6 +3,7 @@
 
     <types>
         <members>Event_Staging_Record__c</members>
+        <members>Event_Throttling_Queue__c</members>
         <members>Event_Service_Provider__mdt</members>
         <name>CustomObject</name>
     </types>    
