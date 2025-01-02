@@ -20,3 +20,21 @@ System.debug(val);
 UUID randomUUID = UUID.randomUUID();
 system.debug(randomUUID); // Prints the UUID string that was randomly generated
 System.debug(randomUUID.toString().length());
+
+
+Event_Throttling_Queue__c batchThrottlingQueue = [SELECT Id, Async_Job_Id__c FROM Event_Throttling_Queue__c WHERE Event_Type__c = ''];
+Event_Throttling_Queue__c batchThrottlingQueue = new Event_Throttling_Queue__c(
+    Event_Type__c = 'TestType',
+    Async_Job_Id__c = '707Kc000019XffeIAC'
+
+);
+insert batchThrottlingQueue;
+
+AsyncApexJob batchJob = [SELECT Id FROM AsyncApexJob WHERE Id=(SELECT Async_Job_Id__c FROM Event_Throttling_Queue__c)];
+AsyncApexJob batchJob = [SELECT Id FROM AsyncApexJob WHERE Id='707Kc000019XffeIAC'];
+
+try {
+    Integer i = 0;
+} finally {
+    
+}

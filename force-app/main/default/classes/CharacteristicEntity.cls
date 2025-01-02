@@ -12,4 +12,10 @@ public with sharing class CharacteristicEntity {
     public CharacteristicEntity() {
 
     }
+
+    public CharacteristicEntity(String name, Object value, String valueType) {
+        this.name = name;
+        this.value = String.valueOf(value);
+        this.valueType = valueType;
+    }
 }

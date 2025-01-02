@@ -13,7 +13,8 @@
         <members>CharacteristicEntity</members>
         
         <members>EventSyncEngine</members>
-        <members>EventBatchQueueable</members>
+        <members>EventDependencyQueueable</members>
+        <members>EventRetryQueueable</members>
         <name>ApexClass</name>
     </types>
 <!-- 
