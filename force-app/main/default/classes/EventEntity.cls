@@ -14,7 +14,7 @@ public virtual with sharing  class EventEntity {
     public CharacteristicEntity[] analyticCharacteristic;
     private transient Map<String, CharacteristicEntity> analyticCharacteristicMap;
     // The event resource of the notification.
-    public Object event;
+    // public Object event;
 
     public EventEntity() {
         analyticCharacteristic = new List<CharacteristicEntity>();

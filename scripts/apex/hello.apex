@@ -33,8 +33,15 @@ insert batchThrottlingQueue;
 AsyncApexJob batchJob = [SELECT Id FROM AsyncApexJob WHERE Id=(SELECT Async_Job_Id__c FROM Event_Throttling_Queue__c)];
 AsyncApexJob batchJob = [SELECT Id FROM AsyncApexJob WHERE Id='707Kc000019XffeIAC'];
 
-try {
-    Integer i = 0;
-} finally {
-    
-}
+StaticResource sr = [SELECT Id, Body FROM StaticResource WHERE Name = 'evtSyncEngineSample'];
+String body = sr.Body.toString();
+Map<String, Object> sam = (Map<String, Object>)JSON.deserializeUntyped(body);
+Map<String, Object> pe = (Map<String, Object>)sam.get('addonEvent');
+String planEvtJSON = JSON.serialize(((Map<String, Object>)pe.get('event')).get('product'));
+
+// System.debug(planEvtJSON);
+
+TMFEntity.Product p = (TMFEntity.Product)JSON.deserialize(planEvtJSON, TMFEntity.Product.class);
+
+
+System.debug(JSON.serialize(p, true));
