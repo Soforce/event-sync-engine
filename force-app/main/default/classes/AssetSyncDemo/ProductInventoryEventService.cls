@@ -22,7 +22,11 @@ public inherited sharing class ProductInventoryEventService extends EventService
         if (eventType == 'ProductAttributeValueChangeEvent') {
             ProductAttributeValueChangeEvent myEvent = (ProductAttributeValueChangeEvent)event;
             ProductInventoryAccess access = new ProductInventoryAccess();
-            access.upsertProduct(myEvent.event.product);
+            try {
+                access.upsertProduct(myEvent.event.product);
+            } catch (ProductInventoryAccess.MissingPrimaryAssetException ex) {
+                throw new PendingEventException(ex.primaryAssetId, 'ProductAttributeValueChangeEvent', ex.getMessage());
+            }
 
         }
     }

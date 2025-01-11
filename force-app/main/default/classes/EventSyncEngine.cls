@@ -210,7 +210,7 @@ public virtual without sharing class EventSyncEngine {
             eventStagingRecord.Tag__c = provider.getTag(event);
             
             // Check duplicate event by the event Id only for new event
-            if (eventStagingRecord.Id != null) {
+            if (eventStagingRecord.Id == null) {
                 Integer dupEvtCount = [SELECT Count() FROM Event_Staging_Record__c WHERE Event_Id__c = :event.eventId];
                 if (dupEvtCount > 0) {
                     throw new EventService.DuplicateEventException('The provided "' + event.eventId + '" event Id is duplicated.');

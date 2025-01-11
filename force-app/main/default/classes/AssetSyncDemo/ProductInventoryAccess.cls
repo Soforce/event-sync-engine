@@ -2,6 +2,14 @@
  * Data Access class for Salesforce Asset related objects
  */
 public inherited sharing class ProductInventoryAccess {
+    public class MissingPrimaryAssetException extends Exception {
+        public String primaryAssetId;
+        public MissingPrimaryAssetException(String primaryAssetId, String errorMessage) {
+            super.setMessage(errorMessage);
+            this.primaryAssetId = primaryAssetId;
+        }
+    }
+
     public ProductInventoryAccess() {
 
     }
@@ -72,7 +80,7 @@ public inherited sharing class ProductInventoryAccess {
             for (TMFEntity.ProductRelationship pr : tmfProduct.productRelationship) {
                 Asset primaryAsset = exIdAssetMap.get(pr.product.id);
                 if (primaryAsset == null) {
-                    // throw exception 
+                    throw new MissingPrimaryAssetException(pr.product.id, 'The primary asset with external id "' + pr.product.id + '" is missing.');
                 } 
                 String rsKey = primaryAsset.Id + '-' + pr.relationshipType + '-' + rootAsset.Id;
 
