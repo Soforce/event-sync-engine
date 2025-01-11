@@ -8,28 +8,12 @@ public virtual without sharing class EventSyncEngine {
      * @description 
      */
     public class EventResult extends EventService.EventResult {
-        // // Indicate if the process is success or failure
-        // public Boolean isSuccess;
-        // // Returns the incoming event Id from the message queue.
-        // public String eventId;
-        // // If an error occurred, returns the exception of the error. If no error occurred, returns null.
-        // public Exception error;
-        // // The event entity data element deserialized from the event resource JSON
-        // protected transient EventEntity event;
-        // The event staging record
         protected transient Event_Staging_Record__c stagingRecord;
-
-        // public EventResult(String eventId) {
-        //     isSuccess = true;
-        //     this.eventId = eventId;
-        // }
 
         public EventResult(Event_Staging_Record__c stagingRecord) {
             super(stagingRecord.Event_Id__c);
 
-            // isSuccess = true;
             this.stagingRecord = stagingRecord;
-            // this.eventId = stagingRecord.Event_Id__c;
         }
     }
 
@@ -82,6 +66,7 @@ public virtual without sharing class EventSyncEngine {
                 AND Status__c IN ('Pending', 'Completed', 'Queued', 'Retry')
         ];
 
+
         // The current event is out-of-date if there are event(s) with same type and master Id arriving later
         return laterEvtCount > 0;
     }
@@ -114,18 +99,8 @@ public virtual without sharing class EventSyncEngine {
                 try {
                     Type t = Type.forName(providerMdt.Service_Provider__c);
                     provider = (EventService)t.newInstance();
-                    // Initialize provider attributes
                     provider.eventType = eventType;
                     provider.batchSize = providerMdt.Batch_Size__c == null ? 1 : (Integer)providerMdt.Batch_Size__c;
-                    // if (providerMdt.Process_Mode__c == 'Realtime') {
-                    //     provider.processMode = EventService.ProcessModeEnum.Realtime;
-                    // } else if (providerMdt.Process_Mode__c == 'Batch') {
-                    //     provider.processMode = EventService.ProcessModeEnum.Batch;
-                    // } else if (providerMdt.Process_Mode__c == 'Throttled Realtime') {
-                    //     provider.processMode = EventService.ProcessModeEnum.ThrottledRealtime;
-                    // } else {
-                    //     throw new EventService.EventServiceException('The "' + providerMdt.Process_Mode__c + '" process mode for the ' + eventType + ' is invalid.');
-                    // }
         
                     return provider;            
                 } catch (Exception ex) {
@@ -137,7 +112,28 @@ public virtual without sharing class EventSyncEngine {
         throw new EventService.EventServiceException('The "' + eventType + '" event type is not supported.');
     }
 
-    
+    /**
+     * @description Receive the event from the message queue and process. This method needs to be exposed as REST API endpoint. 
+     */
+    public Event_Staging_Record__c processEvent(String eventJSON) {
+        try {
+            EventEntity ee = (EventEntity)JSON.deserialize(eventJSON, EventEntity.class);
+
+            // Initialize the event stage record
+            Event_Staging_Record__c eventStagingObj = new Event_Staging_Record__c(
+                Event_Id__c = ee.eventId,
+                Event_Type__c = ee.eventType,
+                Event_Time__c = ee.eventTime,
+                Payload__c = eventJSON,
+                Retry_Count__c = 0
+            );
+
+            return processEvent(eventStagingObj);
+        } catch (Exception ex) {
+            throw new EventService.InvalidEventException('Invalid event payload JSON.\n' + ex.getMessage(), ex);
+        }
+    }
+
     /**
      * @description Receive the event from the message queue and process. This method needs to be exposed as REST API endpoint. 
      */
@@ -221,7 +217,7 @@ public virtual without sharing class EventSyncEngine {
                 }
             }            
 
-            if (!isOutDatedEvent(eventStagingRecord)) {
+            if (isOutDatedEvent(eventStagingRecord)) {
                 throw new EventService.IgnorableEventException('This is an outdated event, as a later event of the same type and master ID has already been received.');
             }
             

@@ -115,8 +115,10 @@ public inherited sharing class ProductInventoryAccess {
             }
         }
 
-        for (TMFEntity.Product childProduct : tmfProduct.product) {
-            prepare(childProduct, ctx);
+        if (tmfProduct.product != null) {
+            for (TMFEntity.Product childProduct : tmfProduct.product) {
+                prepare(childProduct, ctx);
+            }
         }
     }
 
@@ -178,20 +180,22 @@ public inherited sharing class ProductInventoryAccess {
 			Name = tmfProduct.name,
 			External_ID__c = tmfProduct.id,
 			vlocity_cmt__DisconnectDate__c = tmfProduct.terminationDate,
-			vlocity_cmt__ActivationDate__c = tmfProduct.startDate?.date(),
+			vlocity_cmt__ActivationDate__c = Date.today(),
 			vlocity_cmt__ProvisioningStatus__c = tmfProduct.status,
 			Quantity = tmfProduct.quantity
         );
 
         // Pricings
-        for (TMFEntity.ProductPrice pp : tmfProduct.productPrice) {
-            if (pp.priceType == 'RC') {
-                myAsset.vlocity_cmt__RecurringCharge__c = pp.price.taxIncludedAmount.value;
-            } else if (pp.priceType == 'OC') {
-                myAsset.vlocity_cmt__OneTimeCharge__c = pp.price.taxIncludedAmount.value;
+        if (tmfProduct.productPrice != null) {
+            for (TMFEntity.ProductPrice pp : tmfProduct.productPrice) {
+                if (pp.priceType == 'RC') {
+                    myAsset.vlocity_cmt__RecurringCharge__c = pp.price.taxIncludedAmount.value;
+                } else if (pp.priceType == 'OC') {
+                    myAsset.vlocity_cmt__OneTimeCharge__c = pp.price.taxIncludedAmount.value;
+                }
             }
+            myAsset.vlocity_cmt__PricingLogData__c = JSON.serialize(tmfProduct.productPrice);
         }
-        myAsset.vlocity_cmt__PricingLogData__c = JSON.serialize(tmfProduct.productPrice);
 
         // Attributes
 		Map<String, Object> selectedVals = new Map<String, Object>();

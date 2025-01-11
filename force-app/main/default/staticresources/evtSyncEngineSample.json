@@ -5,958 +5,242 @@
     "eventTime": "2025-01-03T16:32:44.531-06:00",
     "event": {
       "product": {
-        "productPrice": [
-          {
-            "finalPrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 35
-              },
-              "taxRate": 0.0,
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 35
-              }
-            },
-            "recurringChargePeriodLength": 1,
-            "price": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 35
-              },
-              "taxRate": 0.0,
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 35
-              }
-            },
-            "immediatePayOption": {
-              "payImmediately": false
-            },
-            "recurringChargePeriod": "month",
-            "standalonePrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 35
-              },
-              "taxRate": 0.0,
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 35
-              }
-            },
-            "priceType": "RC"
-          },
-          {
-            "finalPrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 20.0
-              },
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 1.77
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 21.77
-              }
-            },
-            "price": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 20.0
-              },
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 1.77
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 21.77
-              }
-            },
-            "immediatePayOption": {
-              "payImmediately": false
-            },
-            "standalonePrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 20.0
-              },
-              "taxRate": 0.0,
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 20.0
-              }
-            },
-            "priceType": "OC"
-          },
-          {
-            "finalPrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 20.0
-              },
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 1.77
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 21.77
-              }
-            },
-            "price": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 20.0
-              },
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 1.77
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 21.77
-              }
-            },
-            "immediatePayOption": {
-              "payImmediately": true
-            },
-            "standalonePrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 20.0
-              },
-              "taxRate": 0.0,
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 20.0
-              }
-            },
-            "priceType": "Immediate"
-          },
-          {
-            "finalPrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 20.0
-              },
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 1.77
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 21.77
-              }
-            },
-            "price": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 20.0
-              },
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 1.77
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 21.77
-              }
-            },
-            "immediatePayOption": {
-              "payImmediately": true
-            },
-            "standalonePrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 20.0
-              },
-              "taxRate": 0.0,
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 20.0
-              }
-            },
-            "priceType": "OC"
-          }
-        ],
-        "billingAccount": {
-          "ratingType": "postpaid",
-          "id": "1000157112",
-          "href": "https://amd-apigw-stack-service:8443/v4/billingAccount/1000157112"
-        },
-        "id": "2232104",
+        "status": "active",
+        "startDate": "2025-01-03T22:32:42.262Z",
         "relatedParty": [
           {
-            "@referredType": "Customer",
             "role": "customer",
-            "id": "3000194656"
+            "id": "COMESM_Account.001"
           }
         ],
-        "name": "Go5G Business TE Offer",
-        "activationDate": "2025-01-03T08:00:00.000+00:00",
-        "orderDate": "2025-01-03T21:27:05.532+00:00",
-        "startDate": "2025-01-03T22:32:42.262+00:00",
-        "status": "active",
-        "isBundle": true,
-        "description": "Go5G Business includes unlimited talk,text,and 5G & 4G LTE data on our network and 50GB of high-speed mobile hotspot data (with unlimited 3G hotspot speeds thereafter). ",
+        "quantity": 1,
+        "productPrice": [
+          {
+            "recurringChargePeriod": "month",
+            "priceType": "RC",
+            "price": {
+              "taxRate": 0.0,
+              "taxIncludedAmount": {
+                "value": 35,
+                "unit": "USD"
+              },
+              "dutyFreeAmount": {
+                "value": 35,
+                "unit": "USD"
+              }
+            }
+          },
+          {
+            "priceType": "OC",
+            "price": {
+              "taxIncludedAmount": {
+                "value": 21.77,
+                "unit": "USD"
+              },
+              "dutyFreeAmount": {
+                "value": 20.0,
+                "unit": "USD"
+              }
+            }
+          }
+        ],
+        "productOffering": {
+          "name": "5G Mobile Plan - 10 GB",
+          "id": "VEPC_OFFERING_5G_MOBILE_PLAN_10_GB"
+        },
         "productCharacteristic": [
           {
-            "extensions": {},
             "valueType": "String",
-            "name": "Product_Sub_Type",
-            "value": "NA"
+            "value": "NA",
+            "name": "Product_Sub_Type"
           },
           {
-            "extensions": {},
             "valueType": "Boolean",
-            "name": "Support_Device_Reduced_Price",
-            "value": "false"
+            "value": "false",
+            "name": "Support_Device_Reduced_Price"
           },
           {
-            "extensions": {},
             "valueType": "Boolean",
-            "name": "Support_Device_Full_Price",
-            "value": "true"
+            "value": "true",
+            "name": "Support_Device_Full_Price"
           },
           {
-            "extensions": {},
             "valueType": "String",
-            "name": "DPF_ind",
-            "value": "No"
+            "value": "No",
+            "name": "DPF_ind"
           },
           {
-            "extensions": {},
             "valueType": "Boolean",
-            "name": "Voicemail_Included_Ind",
-            "value": "true"
+            "value": "true",
+            "name": "Voicemail_Included_Ind"
           },
           {
-            "extensions": {},
             "valueType": "String",
-            "name": "Product_Type",
-            "value": "G"
+            "value": "G",
+            "name": "Product_Type"
           },
           {
-            "extensions": {},
             "valueType": "Boolean",
-            "name": "Support_Device_EIP_Price",
-            "value": "false"
+            "value": "false",
+            "name": "Support_Device_EIP_Price"
           },
           {
-            "extensions": {},
             "valueType": "String",
-            "name": "SOC_code",
-            "value": "ZWWF6TE"
+            "value": "ZWWF6TE",
+            "name": "SOC_code"
           },
           {
-            "extensions": {},
             "valueType": "String",
-            "name": "SOC_Effective_Date",
-            "value": "ZWWF6TE-01032025;ZWWAALF6-01032025;USAEHA-01032025;GLBCAMXIN-01032025;USALCA-01032025;GLOBCAMX-01032025;UNLMSGP-01032025;USAECA-01032025;WIFCANMEX-01032025;DOMCNMXTL-01032025"
+            "value": "ZWWF6TE-01032025;ZWWAALF6-01032025;USAEHA-01032025;GLBCAMXIN-01032025;USALCA-01032025;GLOBCAMX-01032025;UNLMSGP-01032025;USAECA-01032025;WIFCANMEX-01032025;DOMCNMXTL-01032025",
+            "name": "SOC_Effective_Date"
           },
           {
-            "extensions": {},
             "valueType": "String",
-            "name": "SOC_Sequence_Number",
-            "value": "ZWWF6TE-549239174;ZWWAALF6-549239173;USAEHA-549239183;GLBCAMXIN-549239176;USALCA-549239184;GLOBCAMX-549239177;UNLMSGP-549239181;USAECA-549239182;WIFCANMEX-549239186;DOMCNMXTL-549239175"
+            "value": "ZWWF6TE-549239174;ZWWAALF6-549239173;USAEHA-549239183;GLBCAMXIN-549239176;USALCA-549239184;GLOBCAMX-549239177;UNLMSGP-549239181;USAECA-549239182;WIFCANMEX-549239186;DOMCNMXTL-549239175",
+            "name": "SOC_Sequence_Number"
           }
         ],
         "product": [
           {
-            "productSpecification": {
-              "@type": "6156b733-3adf-4254-bc8d-477e316c23f6",
-              "name": "SIM",
-              "id": "4d20c0ab-1012-48db-a8a6-c1157baa1cfc"
+            "status": "active",
+            "startDate": "2025-01-03T22:32:42.262Z",
+            "relatedParty": [
+              {
+                "role": "customer",
+                "id": "COMESM_Account.001"
+              }
+            ],
+            "quantity": 1,
+            "productPrice": [
+              {
+                "productOfferingPrice": {
+                  "name": "3e894bca-1180-40f6-bc30-59d4f8cdd664",
+                  "id": "3e894bca-1180-40f6-bc30-59d4f8cdd664"
+                },
+                "priceType": "OC",
+                "price": {
+                  "taxIncludedAmount": {
+                    "value": 21.77,
+                    "unit": "USD"
+                  },
+                  "dutyFreeAmount": {
+                    "value": 20.0,
+                    "unit": "USD"
+                  }
+                },
+                "name": "pSIM Activation for Business",
+                "description": "pSIM Activation for Business",
+                "billingAccount": {
+                  "id": "COMESM_Account.003"
+                }
+              }
+            ],
+            "productOffering": {
+              "name": "SIM Card",
+              "id": "VEPC_OFFERING_SIM_CARD"
             },
             "productCharacteristic": [
               {
-                "extensions": {},
                 "valueType": "String",
                 "name": "Location_ID"
               },
               {
-                "extensions": {},
                 "valueType": "String",
                 "name": "Pool"
               },
               {
-                "extensions": {},
                 "valueType": "String",
                 "name": "Item_ID"
               },
               {
-                "characteristicMetadata": [
-                  {
-                    "name": "Visible",
-                    "value": "False",
-                    "metadataType": "Configuration"
-                  }
-                ],
-                "extensions": {},
                 "valueType": "String",
-                "name": "SIM_SKU",
-                "value": "ZZZ260R070"
+                "value": "ZZZ260R070",
+                "name": "SIM_SKU"
               },
               {
-                "extensions": {},
                 "valueType": "String",
-                "name": "SIM_Type",
-                "value": "pSIM"
+                "value": "pSIM",
+                "name": "SIM_Type"
               },
               {
-                "characteristicMetadata": [
-                  {
-                    "name": "Visible",
-                    "value": "True",
-                    "metadataType": "Configuration"
-                  },
-                  {
-                    "name": "businessType",
-                    "value": "deliveryMethod",
-                    "metadataType": "General"
-                  }
-                ],
-                "extensions": {},
                 "valueType": "String",
-                "name": "Delivery_Method",
-                "valueMetadata": [
-                  {
-                    "name": "businessType",
-                    "value": "shipping",
-                    "metadataType": "General",
-                    "sourceValue": "Indirect_Delivery_Shipping"
-                  },
-                  {
-                    "name": "businessType",
-                    "value": "inCustomersHand",
-                    "metadataType": "General",
-                    "sourceValue": "Direct_Delivery_In_Customer_Hand"
-                  },
-                  {
-                    "name": "businessType",
-                    "value": "buyOnlineWhileInStore",
-                    "metadataType": "General",
-                    "sourceValue": "BuyOnlineWhileInStore"
-                  },
-                  {
-                    "name": "businessType",
-                    "value": "pickUpInStore",
-                    "metadataType": "General",
-                    "sourceValue": "pickUpInStore"
-                  }
-                ],
-                "value": "Indirect_Delivery_Shipping"
+                "value": "Indirect_Delivery_Shipping",
+                "name": "Delivery_Method"
               },
               {
-                "extensions": {},
                 "valueType": "String",
-                "name": "BYOS_Indication",
-                "value": "No"
+                "value": "No",
+                "name": "BYOS_Indication"
               },
               {
-                "characteristicMetadata": [
-                  {
-                    "name": "Visible",
-                    "value": "False",
-                    "metadataType": "Configuration"
-                  },
-                  {
-                    "name": "baseType",
-                    "value": "Physical",
-                    "metadataType": "ResourceManagement"
-                  },
-                  {
-                    "name": "resourceType",
-                    "value": "SIM",
-                    "metadataType": "ResourceManagement"
-                  },
-                  {
-                    "name": "serviceID",
-                    "value": "True",
-                    "metadataType": "ResourceManagement"
-                  }
-                ],
-                "extensions": {},
                 "valueType": "String",
-                "name": "Serial_Number",
-                "value": "8901260000008166519"
+                "value": "8901260000008166519",
+                "name": "Serial_Number"
               },
               {
-                "extensions": {},
                 "valueType": "String",
-                "name": "IMSI",
-                "value": "310260000816651"
+                "value": "310260000816651",
+                "name": "IMSI"
               }
             ],
-            "productTotalPrice": [
-              {
-                "finalPrice": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 1.77
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 21.77
-                  }
-                },
-                "price": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 1.77
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 21.77
-                  }
-                },
-                "immediatePayOption": {
-                  "payImmediately": false
-                },
-                "standalonePrice": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "taxRate": 0.0,
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 0
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  }
-                },
-                "priceType": "OC"
-              },
-              {
-                "finalPrice": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 1.77
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 21.77
-                  }
-                },
-                "price": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 1.77
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 21.77
-                  }
-                },
-                "immediatePayOption": {
-                  "payImmediately": true
-                },
-                "standalonePrice": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "taxRate": 0.0,
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 0
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  }
-                },
-                "priceType": "Immediate"
-              },
-              {
-                "finalPrice": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 1.77
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 21.77
-                  }
-                },
-                "price": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 1.77
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 21.77
-                  }
-                },
-                "immediatePayOption": {
-                  "payImmediately": true
-                },
-                "standalonePrice": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "taxRate": 0.0,
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 0
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  }
-                },
-                "priceType": "OC"
-              }
-            ],
-            "billingAccount": {
-              "ratingType": "postpaid",
-              "id": "1000157112",
-              "href": "https://amd-apigw-stack-service:8443/v4/billingAccount/1000157112"
-            },
-            "id": "2232105",
-            "href": "https://amd-apigw-stack-service:8443/productInventoryManagement/v4/product/2232105",
-            "relatedParty": [
-              {
-                "@referredType": "Customer",
-                "role": "customer",
-                "id": "3000194656",
-                "href": "/v4/relatedParty/3000194656"
-              }
-            ],
-            "version": "0",
-            "name": "SIM",
-            "activationDate": "2025-01-03T08:00:00.000+00:00",
-            "orderDate": "2025-01-03T21:27:05.532+00:00",
-            "startDate": "2025-01-03T22:32:42.262+00:00",
-            "productPrice": [
-              {
-                "taxIncluded": "Excluded",
-                "role": "Price",
-                "description": "pSIM Activation for Business",
-                "finalPrice": {
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "extensions": {},
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 1.77
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 21.77
-                  },
-                  "appliedTax": [
-                    {
-                      "extensions": {},
-                      "taxDefinition": {
-                        "taxRate": 0.0,
-                        "validFor": {
-                          "startDateTime": "2025-01-03T21:36:45.750+00:00",
-                          "endDateTime": "2025-01-03T21:36:45.750+00:00"
-                        },
-                        "exemptionType": "None",
-                        "taxType": "Default",
-                        "taxJurisdiction": {
-                          "level": "none",
-                          "name": "Default"
-                        },
-                        "isExemption": false
-                      },
-                      "id": "1",
-                      "taxAmount": {
-                        "unit": "USD",
-                        "value": 0.8
-                      }
-                    },
-                    {
-                      "extensions": {},
-                      "taxDefinition": {
-                        "taxRate": 0.0,
-                        "validFor": {
-                          "startDateTime": "2025-01-03T21:36:45.750+00:00",
-                          "endDateTime": "2025-01-03T21:36:45.750+00:00"
-                        },
-                        "exemptionType": "None",
-                        "taxType": "Default",
-                        "taxJurisdiction": {
-                          "level": "none",
-                          "name": "Default"
-                        },
-                        "isExemption": false
-                      },
-                      "id": "2",
-                      "taxAmount": {
-                        "unit": "USD",
-                        "value": 0.9
-                      }
-                    },
-                    {
-                      "extensions": {},
-                      "taxDefinition": {
-                        "taxRate": 0.0,
-                        "validFor": {
-                          "startDateTime": "2025-01-03T21:36:45.750+00:00",
-                          "endDateTime": "2025-01-03T21:36:45.750+00:00"
-                        },
-                        "exemptionType": "None",
-                        "taxType": "Default",
-                        "taxJurisdiction": {
-                          "level": "none",
-                          "name": "Default"
-                        },
-                        "isExemption": false
-                      },
-                      "id": "3",
-                      "taxAmount": {
-                        "unit": "USD",
-                        "value": 0.07
-                      }
-                    }
-                  ]
-                },
-                "productOfferingPrice": {
-                  "validFor": {
-                    "startDateTime": "2023-07-12T07:00:00.000+00:00"
-                  },
-                  "name": "3e894bca-1180-40f6-bc30-59d4f8cdd664",
-                  "id": "3e894bca-1180-40f6-bc30-59d4f8cdd664",
-                  "version": "3e894bca-1180-40f6-bc30-59d4f8cdd664"
-                },
-                "billingAccount": {
-                  "ratingType": "postpaid",
-                  "id": "1000157112",
-                  "href": "https://amd-apigw-stack-service:8443/v4/billingAccount/1000157112"
-                },
-                "price": {
-                  "priceRecordId": "328975cd-8c3b-45ef-884b-5a97af5d4141",
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "extensions": {},
-                  "impactingPriceParameter": [
-                    {
-                      "priceParameterType": "occurrences",
-                      "name": "Occurrences",
-                      "value": "10"
-                    }
-                  ],
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 1.77
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 21.77
-                  },
-                  "appliedTax": [
-                    {
-                      "extensions": {},
-                      "taxDefinition": {
-                        "taxRate": 0.0,
-                        "validFor": {
-                          "startDateTime": "2025-01-03T21:36:45.750+00:00",
-                          "endDateTime": "2025-01-03T21:36:45.750+00:00"
-                        },
-                        "exemptionType": "None",
-                        "taxType": "Default",
-                        "taxJurisdiction": {
-                          "level": "none",
-                          "name": "Default"
-                        },
-                        "isExemption": false
-                      },
-                      "id": "1",
-                      "taxAmount": {
-                        "unit": "USD",
-                        "value": 0.8
-                      }
-                    },
-                    {
-                      "extensions": {},
-                      "taxDefinition": {
-                        "taxRate": 0.0,
-                        "validFor": {
-                          "startDateTime": "2025-01-03T21:36:45.750+00:00",
-                          "endDateTime": "2025-01-03T21:36:45.750+00:00"
-                        },
-                        "exemptionType": "None",
-                        "taxType": "Default",
-                        "taxJurisdiction": {
-                          "level": "none",
-                          "name": "Default"
-                        },
-                        "isExemption": false
-                      },
-                      "id": "2",
-                      "taxAmount": {
-                        "unit": "USD",
-                        "value": 0.9
-                      }
-                    },
-                    {
-                      "extensions": {},
-                      "taxDefinition": {
-                        "taxRate": 0.0,
-                        "validFor": {
-                          "startDateTime": "2025-01-03T21:36:45.750+00:00",
-                          "endDateTime": "2025-01-03T21:36:45.750+00:00"
-                        },
-                        "exemptionType": "None",
-                        "taxType": "Default",
-                        "taxJurisdiction": {
-                          "level": "none",
-                          "name": "Default"
-                        },
-                        "isExemption": false
-                      },
-                      "id": "3",
-                      "taxAmount": {
-                        "unit": "USD",
-                        "value": 0.07
-                      }
-                    }
-                  ]
-                },
-                "priceCategory": "activation",
-                "immediatePayOption": {
-                  "payImmediately": true,
-                  "payOption": "Mandatory"
-                },
-                "id": "3e894bca-1180-40f6-bc30-59d4f8cdd664",
-                "standalonePrice": {
-                  "priceRecordId": "328975cd-8c3b-45ef-884b-5a97af5d4141",
-                  "dutyFreeAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "taxRate": 0.0,
-                  "extensions": {},
-                  "impactingPriceParameter": [
-                    {
-                      "priceParameterType": "occurrences",
-                      "name": "Occurrences",
-                      "value": "10"
-                    }
-                  ],
-                  "taxAmount": {
-                    "unit": "USD",
-                    "value": 0
-                  },
-                  "taxIncludedAmount": {
-                    "unit": "USD",
-                    "value": 20.0
-                  },
-                  "appliedTax": [
-                    {
-                      "extensions": {},
-                      "taxDefinition": {
-                        "taxRate": 0.0,
-                        "validFor": {
-                          "startDateTime": "2025-01-03T21:36:45.751+00:00",
-                          "endDateTime": "2025-01-03T21:36:45.751+00:00"
-                        },
-                        "exemptionType": "None",
-                        "taxType": "Default",
-                        "taxJurisdiction": {
-                          "level": "none",
-                          "name": "Default"
-                        },
-                        "isExemption": false
-                      },
-                      "id": "1",
-                      "taxAmount": {
-                        "unit": "USD",
-                        "value": 0
-                      }
-                    }
-                  ]
-                },
-                "priceType": "OC",
-                "name": "pSIM Activation for Business"
-              }
-            ],
-            "status": "active",
+            "orderDate": "2025-01-03T21:27:05.532Z",
+            "name": "SIM Card",
             "isBundle": false,
+            "id": "2232105",
             "description": "SIM.",
-            "quantity": 1,
-            "productOffering": {
-              "@type": "SIM",
-              "name": "SIM",
-              "id": "7c83ea59-e8f3-4160-ac72-7cfd67d8041b"
+            "billingAccount": {
+              "id": "COMESM_Account.003"
             }
           },
           {
-            "productSpecification": {
-              "@type": "5ba09e99-b7e5-45b1-bfa9-81aef2c270e3",
-              "name": "Phone Number",
-              "id": "3587e3a1-ee11-4200-ad82-05e7efe18473"
+            "status": "active",
+            "startDate": "2025-01-03T22:32:42.262Z",
+            "relatedParty": [
+              {
+                "role": "customer",
+                "id": "COMESM_Account.001"
+              }
+            ],
+            "productOffering": {
+              "name": "SIM Card",
+              "id": "B2C_CH_OFFERING_PHONE_NUMBER"
             },
             "productCharacteristic": [
               {
-                "characteristicMetadata": [
-                  {
-                    "name": "baseType",
-                    "value": "Logical",
-                    "metadataType": "ResourceManagement"
-                  },
-                  {
-                    "name": "resourceType",
-                    "value": "MSISDN",
-                    "metadataType": "ResourceManagement"
-                  },
-                  {
-                    "name": "serviceID",
-                    "value": "True",
-                    "metadataType": "ResourceManagement"
-                  },
-                  {
-                    "name": "billingResource",
-                    "value": "True",
-                    "metadataType": "ResourceManagement"
-                  },
-                  {
-                    "name": "billingGuiding",
-                    "value": "True",
-                    "metadataType": "ResourceManagement"
-                  },
-                  {
-                    "name": "Visible",
-                    "value": "True",
-                    "metadataType": "Configuration"
-                  },
-                  {
-                    "name": "configurableAfterSubmit",
-                    "value": "True",
-                    "metadataType": "Configuration"
-                  }
-                ],
-                "extensions": {},
                 "valueType": "String",
-                "name": "MSISDN",
-                "value": "4793521086"
+                "value": "4793521086",
+                "name": "MSISDN"
               },
               {
-                "extensions": {},
                 "valueType": "String",
-                "name": "NL",
-                "value": "GNRL"
+                "value": "GNRL",
+                "name": "NL"
               },
               {
-                "extensions": {},
                 "valueType": "String",
-                "name": "NPA",
-                "value": "479"
+                "value": "479",
+                "name": "NPA"
               },
               {
-                "extensions": {},
                 "valueType": "String",
-                "name": "NXX",
-                "value": "352"
+                "value": "352",
+                "name": "NXX"
               }
             ],
-            "id": "2232112",
-            "href": "https://amd-apigw-stack-service:8443/productInventoryManagement/v4/product/2232112",
-            "relatedParty": [
-              {
-                "@referredType": "Customer",
-                "role": "customer",
-                "id": "3000194656",
-                "href": "/v4/relatedParty/3000194656"
-              }
-            ],
-            "version": "0",
             "name": "Phone Number",
-            "activationDate": "2025-01-03T08:00:00.000+00:00",
-            "startDate": "2025-01-03T22:32:42.262+00:00",
-            "status": "active"
+            "id": "2232112",
+            "billingAccount": {
+              "id": "COMESM_Account.003"
+            }            
           }
         ],
-        "quantity": 1,
-        "productOffering": {
-          "@type": "Mobile_GSM_Family_Offer",
-          "name": "Go5G Business TE Offer",
-          "id": "73caea8c-9601-407e-af00-0787ccf2c08a"
+        "orderDate": "2025-01-03T21:27:05.532Z",
+        "name": "5G Mobile Plan - 10 GB",
+        "isBundle": true,
+        "id": "2232104",
+        "description": "Mobile Plan 5G with 10 GB data.",
+        "billingAccount": {
+          "id": "COMESM_Account.003"
         }
       }
     }
@@ -967,160 +251,80 @@
     "eventTime": "2025-01-03T16:32:44.2-06:00",
     "event": {
       "product": {
-        "productSpecification": {
-          "@type": "e9152360-f100-4260-afb7-5061595c30e6",
-          "productSpecificationType": "e9152360-f100-4260-afb7-5061595c30e6",
-          "productSpecificationTypeId": "e9152360-f100-4260-afb7-5061595c30e6",
-          "name": "Enhanced Voicemail",
-          "id": "d6593fd3-7b8f-49cd-9ae0-c78845c40e8b",
-          "href": "/v4/productSpecification/d6593fd3-7b8f-49cd-9ae0-c78845c40e8b"
-        },
-        "productTotalPrice": [
-          {
-            "finalPrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxRate": 0.0,
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 0
-              }
-            },
-            "recurringChargePeriodLength": 1,
-            "price": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxRate": 0.0,
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 0
-              }
-            },
-            "immediatePayOption": {
-              "payImmediately": false
-            },
-            "recurringChargePeriod": "month",
-            "standalonePrice": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxRate": 0.0,
-              "extensions": {},
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 0
-              }
-            },
-            "priceType": "RC"
-          }
-        ],
-        "billingAccount": {
-          "ratingType": "postpaid",
-          "id": "1000157112",
-          "href": "https://amd-apigw-stack-service:8443/v4/billingAccount/1000157112"
-        },
-        "id": "2232113",
+        "status": "active",
+        "startDate": "2025-01-03T22:32:42.262Z",
         "relatedParty": [
           {
-            "@referredType": "Customer",
             "role": "customer",
-            "id": "3000194656",
-            "href": "/v4/relatedParty/3000194656"
-          }
-        ],
-        "name": "Enhanced Voicemail",
-        "activationDate": "2025-01-03T08:00:00.000+00:00",
-        "orderDate": "2025-01-03T21:27:05.532+00:00",
-        "startDate": "2025-01-03T22:32:42.262+00:00",
-        "productPrice": [
-          {
-            "description": "Enhanced VoiceMail",
-            "recurringChargePeriodLength": 1,
-            "billingAccount": {
-              "ratingType": "postpaid",
-              "id": "1000157112",
-              "href": "https://amd-apigw-stack-service:8443/v4/billingAccount/1000157112"
-            },
-            "price": {
-              "dutyFreeAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxRate": 0.0,
-              "taxAmount": {
-                "unit": "USD",
-                "value": 0
-              },
-              "taxIncludedAmount": {
-                "unit": "USD",
-                "value": 0
-              }
-            },
-            "recurringChargePeriod": "month",
-            "priceType": "RC",
-            "name": "Enhanced Voicemail RC"
-          }
-        ],
-        "status": "active",
-        "isBundle": false,
-        "description": "Enhanced Voicemail",
-        "productCharacteristic": [
-          {
-            "valueType": "String",
-            "name": "Tax_Orientation_Inherited",
-            "value": "Yes"
-          },
-          {
-            "valueType": "Boolean",
-            "name": "Voicemail_Included_Ind",
-            "value": "true"
-          },
-          {
-            "valueType": "String",
-            "name": "Product_Type",
-            "value": "G"
-          },
-          {
-            "valueType": "String",
-            "name": "SOC_Sequence_Number",
-            "value": "VMNO-549239185"
+            "id": "COMESM_Account.001"
           }
         ],
         "quantity": 1,
-        "productOffering": {
-          "@type": "Phone_Service",
-          "name": "Enhanced Voicemail",
-          "id": "d9e9ce09-9f4c-4141-bbf7-65ea0199acfc"
-        },
         "productRelationship": [
           {
-            "@type": "subscriptionRelation",
+            "relationshipType": "RelyOn",
             "product": {
               "name": "2232104",
               "id": "2232104"
-            },
-            "relationshipType": "RelyOn"
+            }
           }
-        ]
+        ],
+        "productPrice": [
+          {
+            "recurringChargePeriod": "month",
+            "priceType": "RC",
+            "price": {
+              "taxRate": 0.0,
+              "taxIncludedAmount": {
+                "value": 0,
+                "unit": "USD"
+              },
+              "dutyFreeAmount": {
+                "value": 0,
+                "unit": "USD"
+              }
+            },
+            "name": "5 GB, 500 Minutes & 500 Texts for 30 days RC",
+            "description": "5 GB, 500 Minutes & 500 Texts for 30 days",
+            "billingAccount": {
+              "id": "COMESM_Account.003"
+            }
+          }
+        ],
+        "productOffering": {
+          "name": "5 GB, 500 Minutes & 500 Texts for 30 days",
+          "id": "VEPC_OFFERING_5_GB_500_MINUTES_500_TEXTS_FOR_30_DAYS"
+        },
+        "productCharacteristic": [
+          {
+            "valueType": "String",
+            "value": "Yes",
+            "name": "Tax_Orientation_Inherited"
+          },
+          {
+            "valueType": "Boolean",
+            "value": "true",
+            "name": "Voicemail_Included_Ind"
+          },
+          {
+            "valueType": "String",
+            "value": "G",
+            "name": "Product_Type"
+          },
+          {
+            "valueType": "String",
+            "value": "VMNO-549239185",
+            "name": "SOC_Sequence_Number"
+          }
+        ],
+        "orderDate": "2025-01-03T21:27:05.532Z",
+        "name": "5 GB, 500 Minutes & 500 Texts for 30 days",
+        "isBundle": false,
+        "id": "2232113",
+        "description": "5 GB, 500 Minutes & 500 Texts for 30 days",
+        "billingAccount": {
+          "id": "COMESM_Account.003"
+        }
       }
     }
   }

@@ -17,11 +17,16 @@
         <members>EventService</members>
         <members>CharacteristicEntity</members>
         
+        <members>EventHandler</members>
         <members>EventSyncEngine</members>
         <members>EventDependencyQueueable</members>
         <members>EventRetryQueueable</members>
         <name>ApexClass</name>
     </types>
+	<types>
+		<members>Event_Service_Provider.ProductAttributeValueChangeEvent</members>
+		<name>CustomMetadata</name>
+	</types>   
 	<types>
 		<members>evtSyncEngineSample</members>
 		<name>StaticResource</name>

@@ -16,6 +16,7 @@ public virtual with sharing  class EventEntity {
     // The event resource of the notification.
     // public Object event;
 
+
     public EventEntity() {
         analyticCharacteristic = new List<CharacteristicEntity>();
         analyticCharacteristicMap = new Map<String, CharacteristicEntity>();
@@ -29,12 +30,15 @@ public virtual with sharing  class EventEntity {
         this.eventTime = eventTime;
     }
 
+
     public Object getCharacteristicValue(String name) {
+        if (analyticCharacteristicMap == null) analyticCharacteristicMap = new Map<String, CharacteristicEntity>();
         return analyticCharacteristicMap.get(name.toLowerCase())?.value;
     }
 
     public void setCharacteristicValue(String name, Object value, String valueType) {
         CharacteristicEntity ch = new CharacteristicEntity(name, value, valueType);
+        if (analyticCharacteristicMap == null) analyticCharacteristicMap = new Map<String, CharacteristicEntity>();
         analyticCharacteristicMap.put(name.toLowerCase(), ch);
     }
 
