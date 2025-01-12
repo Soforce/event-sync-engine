@@ -116,7 +116,14 @@ public virtual without sharing class EventSyncEngine {
      * @description Receive the event from the message queue and process. This method needs to be exposed as REST API endpoint. 
      */
     public Event_Staging_Record__c processEvent(String eventJSON) {
+        // Check payload size and throw PayloadTooLargeException if needed
+        if (eventJSON != null && eventJSON.length() > MaxPayloadSize) {
+            throw new EventService.PayloadTooLargeException('The event payload exceeds the maximum size of ' + String.valueOf(MaxPayloadSize) + '.');
+        }
+        
         try {
+
+            
             EventEntity ee = (EventEntity)JSON.deserialize(eventJSON, EventEntity.class);
 
             // Initialize the event stage record

@@ -38,7 +38,7 @@ AsyncApexJob batchJob = [SELECT Id FROM AsyncApexJob WHERE Id='707Kc000019XffeIA
 StaticResource sr = [SELECT Id, Body FROM StaticResource WHERE Name = 'evtSyncEngineSample'];
 String body = sr.Body.toString();
 Map<String, Object> sam = (Map<String, Object>)JSON.deserializeUntyped(body);
-Map<String, Object> pe = (Map<String, Object>)sam.get('addonEvent');
+Map<String, Object> pe = (Map<String, Object>)sam.get('rateplanEvent');
 // Map<String, Object> pe = (Map<String, Object>)sam.get('rateplanEvent');
 String planEvtJSON = JSON.serialize(((Map<String, Object>)pe.get('event')).get('product'));
 
@@ -47,7 +47,10 @@ String planEvtJSON = JSON.serialize(((Map<String, Object>)pe.get('event')).get('
 TMFEntity.Product p = (TMFEntity.Product)JSON.deserialize(planEvtJSON, TMFEntity.Product.class);
 System.debug(JSON.serialize(p, true));
 
-ProductInventoryAccess access = new ProductInventoryAccess();
-Asset myAsset = access.upsertProduct(p);
+// ProductInventoryAccess access = new ProductInventoryAccess();
+// Asset myAsset = access.upsertProduct(p);
+
+EventSyncEngine engine = new EventSyncEngine();
+engine.processEvent(planEvtJSON);
 
 System.debug(myAsset);

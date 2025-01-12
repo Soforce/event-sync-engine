@@ -21,8 +21,9 @@ global without sharing class EventHandler {
                 resp.responseBody = Blob.valueOf(stagingRec.Error_Message__c);
             }
         } catch (Exception ex) {
+            System.debug(ex.getMessage());
             resp.statusCode = 500;
-            resp.responseBody = Blob.valueOf(JSON.serialize(ex));
+            resp.responseBody = Blob.valueOf(EventSyncEngine.getErrorMessage(ex));
         }
 
     }

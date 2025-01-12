@@ -47,6 +47,7 @@ public without sharing class EventRetryQueueable implements Queueable, Finalizer
                 // There is already an Queueable job scheduled for the given event type. 
                 asyncJobId = (Id)asyncJob.Id;
             }
+        } catch (Exception ex) {  // Do nothing
         } finally {}
         return asyncJobId;
     }
@@ -65,6 +66,7 @@ public without sharing class EventRetryQueueable implements Queueable, Finalizer
                 Async_Job_Id__c = apexJobId
             );
             upsert eventBatchQueue Event_Type__c;
+        } catch (Exception ex) { // Do nothing
         } finally {}
         return apexJobId;
     }   
@@ -172,6 +174,8 @@ public without sharing class EventRetryQueueable implements Queueable, Finalizer
                 // Update the errors of the failed pending event 
                 this.currentRetryEvent.Error_Message__c += '\n' + EventSyncEngine.getErrorMessage(unhandledEx);
                 update this.currentRetryEvent;
+            } catch (Exception ex) {
+                // DO Nothing
             } finally {
                 // Kick-off the EventRetryQueueable for next retry event
                 if (Limits.getQueueableJobs() < Limits.getLimitQueueableJobs()) {

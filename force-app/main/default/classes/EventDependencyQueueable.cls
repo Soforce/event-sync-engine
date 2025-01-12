@@ -67,6 +67,8 @@ public with sharing class EventDependencyQueueable implements Queueable, Finaliz
                 Event_Staging_Record__c pendingEvtRec = engine.getEventRecord(pendingEvtId);
                 pendingEvtRec.Error_Message__c += '\n' + EventSyncEngine.getErrorMessage(unhandledEx);
                 update pendingEvtRec;
+            } catch (Exception ex) {
+                // DO Nothing
             } finally {
                 // Move to next pending event
                 if (index + 1 < pendingEventIds.size()) {
