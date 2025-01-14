@@ -1,0 +1,83 @@
+{
+    "eventId": "e6631335-df58-42b4-9c02-55ff76d84850",
+    "eventType": "ProductAttributeValueChangeEvent",
+    "eventTime": "2025-01-03T16:32:44.2-06:00",
+    "event": {
+      "product": {
+        "status": "active",
+        "startDate": "2025-01-03T22:32:42.262Z",
+        "relatedParty": [
+          {
+            "role": "customer",
+            "id": "COMESM_Account.001"
+          }
+        ],
+        "quantity": 1,
+        "productRelationship": [
+          {
+            "relationshipType": "RelyOn",
+            "product": {
+              "name": "2232104",
+              "id": "2232104"
+            }
+          }
+        ],
+        "productPrice": [
+          {
+            "recurringChargePeriod": "month",
+            "priceType": "RC",
+            "price": {
+              "taxRate": 0,
+              "taxIncludedAmount": {
+                "value": 0,
+                "unit": "USD"
+              },
+              "dutyFreeAmount": {
+                "value": 0,
+                "unit": "USD"
+              }
+            },
+            "name": "5 GB, 500 Minutes & 500 Texts for 30 days RC",
+            "description": "5 GB, 500 Minutes & 500 Texts for 30 days",
+            "billingAccount": {
+              "id": "COMESM_Account.003"
+            }
+          }
+        ],
+        "productOffering": {
+          "name": "5 GB, 500 Minutes & 500 Texts for 30 days",
+          "id": "VEPC_OFFERING_5_GB_500_MINUTES_500_TEXTS_FOR_30_DAYS"
+        },
+        "productCharacteristic": [
+          {
+            "valueType": "String",
+            "value": "Yes",
+            "name": "Tax_Orientation_Inherited"
+          },
+          {
+            "valueType": "Boolean",
+            "value": "true",
+            "name": "Voicemail_Included_Ind"
+          },
+          {
+            "valueType": "String",
+            "value": "G",
+            "name": "Product_Type"
+          },
+          {
+            "valueType": "String",
+            "value": "VMNO-549239185",
+            "name": "SOC_Sequence_Number"
+          }
+        ],
+        "orderDate": "2025-01-03T21:27:05.532Z",
+        "name": "5 GB, 500 Minutes & 500 Texts for 30 days",
+        "isBundle": false,
+        "id": "2232113",
+        "description": "5 GB, 500 Minutes & 500 Texts for 30 days",
+        "billingAccount": {
+          "id": "COMESM_Account.003"
+        }
+      }
+    }
+  }

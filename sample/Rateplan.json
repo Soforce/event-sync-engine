@@ -1,0 +1,246 @@
+{
+    "eventId": "2b684c3e-de14-4d49-9eb5-7ae80f71b2aa",
+    "eventType": "ProductAttributeValueChangeEvent",
+    "eventTime": "2025-01-03T16:32:44.531-06:00",
+    "event": {
+      "product": {
+        "status": "active",
+        "startDate": "2025-01-03T22:32:42.262Z",
+        "relatedParty": [
+          {
+            "role": "customer",
+            "id": "COMESM_Account.001"
+          }
+        ],
+        "quantity": 1,
+        "productPrice": [
+          {
+            "recurringChargePeriod": "month",
+            "priceType": "RC",
+            "price": {
+              "taxRate": 0,
+              "taxIncludedAmount": {
+                "value": 35,
+                "unit": "USD"
+              },
+              "dutyFreeAmount": {
+                "value": 35,
+                "unit": "USD"
+              }
+            }
+          },
+          {
+            "priceType": "OC",
+            "price": {
+              "taxIncludedAmount": {
+                "value": 21.77,
+                "unit": "USD"
+              },
+              "dutyFreeAmount": {
+                "value": 20,
+                "unit": "USD"
+              }
+            }
+          }
+        ],
+        "productOffering": {
+          "name": "5G Mobile Plan - 10 GB",
+          "id": "VEPC_OFFERING_5G_MOBILE_PLAN_10_GB"
+        },
+        "productCharacteristic": [
+          {
+            "valueType": "String",
+            "value": "NA",
+            "name": "Product_Sub_Type"
+          },
+          {
+            "valueType": "Boolean",
+            "value": "false",
+            "name": "Support_Device_Reduced_Price"
+          },
+          {
+            "valueType": "Boolean",
+            "value": "true",
+            "name": "Support_Device_Full_Price"
+          },
+          {
+            "valueType": "String",
+            "value": "No",
+            "name": "DPF_ind"
+          },
+          {
+            "valueType": "Boolean",
+            "value": "true",
+            "name": "Voicemail_Included_Ind"
+          },
+          {
+            "valueType": "String",
+            "value": "G",
+            "name": "Product_Type"
+          },
+          {
+            "valueType": "Boolean",
+            "value": "false",
+            "name": "Support_Device_EIP_Price"
+          },
+          {
+            "valueType": "String",
+            "value": "ZWWF6TE",
+            "name": "SOC_code"
+          },
+          {
+            "valueType": "String",
+            "value": "ZWWF6TE-01032025;ZWWAALF6-01032025;USAEHA-01032025;GLBCAMXIN-01032025;USALCA-01032025;GLOBCAMX-01032025;UNLMSGP-01032025;USAECA-01032025;WIFCANMEX-01032025;DOMCNMXTL-01032025",
+            "name": "SOC_Effective_Date"
+          },
+          {
+            "valueType": "String",
+            "value": "ZWWF6TE-549239174;ZWWAALF6-549239173;USAEHA-549239183;GLBCAMXIN-549239176;USALCA-549239184;GLOBCAMX-549239177;UNLMSGP-549239181;USAECA-549239182;WIFCANMEX-549239186;DOMCNMXTL-549239175",
+            "name": "SOC_Sequence_Number"
+          }
+        ],
+        "product": [
+          {
+            "status": "active",
+            "startDate": "2025-01-03T22:32:42.262Z",
+            "relatedParty": [
+              {
+                "role": "customer",
+                "id": "COMESM_Account.001"
+              }
+            ],
+            "quantity": 1,
+            "productPrice": [
+              {
+                "productOfferingPrice": {
+                  "name": "3e894bca-1180-40f6-bc30-59d4f8cdd664",
+                  "id": "3e894bca-1180-40f6-bc30-59d4f8cdd664"
+                },
+                "priceType": "OC",
+                "price": {
+                  "taxIncludedAmount": {
+                    "value": 21.77,
+                    "unit": "USD"
+                  },
+                  "dutyFreeAmount": {
+                    "value": 20,
+                    "unit": "USD"
+                  }
+                },
+                "name": "pSIM Activation for Business",
+                "description": "pSIM Activation for Business",
+                "billingAccount": {
+                  "id": "COMESM_Account.003"
+                }
+              }
+            ],
+            "productOffering": {
+              "name": "SIM Card",
+              "id": "VEPC_OFFERING_SIM_CARD"
+            },
+            "productCharacteristic": [
+              {
+                "valueType": "String",
+                "name": "Location_ID"
+              },
+              {
+                "valueType": "String",
+                "name": "Pool"
+              },
+              {
+                "valueType": "String",
+                "name": "Item_ID"
+              },
+              {
+                "valueType": "String",
+                "value": "ZZZ260R070",
+                "name": "SIM_SKU"
+              },
+              {
+                "valueType": "String",
+                "value": "pSIM",
+                "name": "SIM_Type"
+              },
+              {
+                "valueType": "String",
+                "value": "Indirect_Delivery_Shipping",
+                "name": "Delivery_Method"
+              },
+              {
+                "valueType": "String",
+                "value": "No",
+                "name": "BYOS_Indication"
+              },
+              {
+                "valueType": "String",
+                "value": "8901260000008166519",
+                "name": "Serial_Number"
+              },
+              {
+                "valueType": "String",
+                "value": "310260000816651",
+                "name": "IMSI"
+              }
+            ],
+            "orderDate": "2025-01-03T21:27:05.532Z",
+            "name": "SIM Card",
+            "isBundle": false,
+            "id": "2232105",
+            "description": "SIM.",
+            "billingAccount": {
+              "id": "COMESM_Account.003"
+            }
+          },
+          {
+            "status": "active",
+            "startDate": "2025-01-03T22:32:42.262Z",
+            "relatedParty": [
+              {
+                "role": "customer",
+                "id": "COMESM_Account.001"
+              }
+            ],
+            "productOffering": {
+              "name": "SIM Card",
+              "id": "B2C_CH_OFFERING_PHONE_NUMBER"
+            },
+            "productCharacteristic": [
+              {
+                "valueType": "String",
+                "value": "4793521086",
+                "name": "MSISDN"
+              },
+              {
+                "valueType": "String",
+                "value": "GNRL",
+                "name": "NL"
+              },
+              {
+                "valueType": "String",
+                "value": "479",
+                "name": "NPA"
+              },
+              {
+                "valueType": "String",
+                "value": "352",
+                "name": "NXX"
+              }
+            ],
+            "name": "Phone Number",
+            "id": "2232112",
+            "billingAccount": {
+              "id": "COMESM_Account.003"
+            }
+          }
+        ],
+        "orderDate": "2025-01-03T21:27:05.532Z",
+        "name": "5G Mobile Plan - 10 GB",
+        "isBundle": true,
+        "id": "2232104",
+        "description": "Mobile Plan 5G with 10 GB data.",
+        "billingAccount": {
+          "id": "COMESM_Account.003"
+        }
+      }
+    }
+  }
